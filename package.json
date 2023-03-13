@@ -1,0 +1,24 @@
+{
+  "name": "@wonderlandengine/8thwall-tracking",
+  "version": "1.0.0",
+  "description": "Wonderland 8thwall implementation",
+  "main": "src/index.js",
+  "type": "module",
+  "module": "src/index.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "wonderland-engine"
+  ],
+  "devDependencies": {
+    "@types/qrcode-svg": "^1.1.1",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@wonderlandengine/api": "^0.9.8",
+    "@wonderlandengine/components": "^0.9.2",
+    "gl-matrix": "^3.4.3",
+    "qrcode-svg": "^1.1.0"
+  }
+}

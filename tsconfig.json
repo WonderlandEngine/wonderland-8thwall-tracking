@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "ES6",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "declaration": true,
+    "newLine": "LF",
+    "allowJs": false,
+    "strict": true,
+  },
+
+  "include": [ "./src/**/*.ts", "index.ts"],
+  "exclude": [ "node_modules" ]
+}

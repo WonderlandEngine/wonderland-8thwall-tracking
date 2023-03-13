@@ -105,3 +105,8 @@ dist
 
 .DS_Store
 
+
+.editor
+cache/
+deploy/
+

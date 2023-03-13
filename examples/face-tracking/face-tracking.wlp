@@ -1,0 +1,888 @@
+{
+    "objects": {
+        "14": {
+            "name": "Player",
+            "components": [
+                {
+                    "type": "wasd-controls",
+                    "wasd-controls": {
+                        "headObject": "17"
+                    }
+                }
+            ],
+            "translation": [
+                -2.6877918,
+                1.1786487,
+                1.5543167
+            ],
+            "rotation": [
+                0.0,
+                -0.5047156,
+                0.0,
+                0.8632856
+            ],
+            "scaling": [
+                0.9999998,
+                1.0,
+                0.9999998
+            ]
+        },
+        "17": {
+            "name": "NonVrCamera",
+            "parent": "14",
+            "components": [
+                {
+                    "type": "view"
+                },
+                {
+                    "type": "mouse-look"
+                },
+                {
+                    "type": "AR-face-tracking-camera",
+                    "AR-face-tracking-camera": {
+                        "cameraDirection": "front"
+                    }
+                },
+                {
+                    "type": "button-start-ar-session"
+                },
+                {
+                    "type": "button-end-ar-session"
+                }
+            ]
+        },
+        "18": {
+            "name": "EyeLeft",
+            "parent": "14",
+            "components": [
+                {
+                    "type": "view"
+                },
+                {
+                    "type": "input",
+                    "input": {
+                        "type": "eye left"
+                    }
+                }
+            ]
+        },
+        "21": {
+            "name": "Light",
+            "components": [
+                {
+                    "type": "light",
+                    "light": {
+                        "attenuation": 0.1
+                    }
+                }
+            ],
+            "translation": [
+                0.0,
+                3.0,
+                2.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "23": {
+            "name": "Light.000",
+            "components": [
+                {
+                    "type": "light",
+                    "light": {
+                        "attenuation": 0.1
+                    }
+                }
+            ],
+            "translation": [
+                -1.3266143,
+                1.8774745,
+                -6.0196962
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "27": {
+            "name": "NoseTracking",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "type": "face-attachment-point-example",
+                    "face-attachment-point-example": {
+                        "ARFaceTrackingCamera": "17",
+                        "attachmentPoint": "noseTip",
+                        "attachedObject": "66"
+                    }
+                }
+            ]
+        },
+        "45": {
+            "name": "EyeRight",
+            "parent": "14",
+            "components": [
+                {
+                    "type": "view"
+                },
+                {
+                    "type": "input",
+                    "input": {
+                        "type": "eye right"
+                    }
+                }
+            ]
+        },
+        "62": {
+            "name": "NoseMesh",
+            "parent": "66",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "9",
+                        "material": "26"
+                    },
+                    "active": true
+                }
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.1,
+                0.1,
+                0.1
+            ]
+        },
+        "65": {
+            "link": {
+                "name": "headOccluder",
+                "file": "models\\head-occluder-cm92ohq49a.glb"
+            },
+            "rotation": [
+                4.174256318378866e-8,
+                -0.0440537,
+                0.9990291,
+                4.5594585884600753e-8
+            ],
+            "translation": [
+                9.630767294765977e-8,
+                -0.1076431,
+                0.5102616
+            ],
+            "scaling": [
+                0.0659999,
+                0.0659999,
+                0.0659999
+            ],
+            "parent": "83",
+            "components": [
+                {
+                    "active": true
+                }
+            ],
+            "name": "HeadOccluder"
+        },
+        "66": {
+            "name": "Nose",
+            "parent": "27",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "77": {
+            "name": "FaceMaskWireframe",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "parent": null,
+            "components": [
+                {
+                    "type": "face-mask-example",
+                    "face-mask-example": {
+                        "ARFaceTrackingCamera": "17",
+                        "faceMaskMaterial": "69"
+                    }
+                }
+            ]
+        },
+        "79": {
+            "name": "FaceMask",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "parent": null,
+            "components": [
+                {
+                    "type": "face-mask-example",
+                    "face-mask-example": {
+                        "ARFaceTrackingCamera": "17",
+                        "faceMaskMaterial": "78"
+                    }
+                }
+            ]
+        },
+        "81": {
+            "name": "Glasses-example",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "parent": null,
+            "components": [
+                {
+                    "type": "face-attachment-point-example",
+                    "face-attachment-point-example": {
+                        "ARFaceTrackingCamera": "17",
+                        "attachmentPoint": "noseBridge",
+                        "attachedObject": "83"
+                    }
+                }
+            ]
+        },
+        "83": {
+            "name": "Glasses",
+            "parent": "81"
+        },
+        "84": {
+            "name": "GlassesGeometry",
+            "parent": "83",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "87",
+                        "material": "86"
+                    }
+                }
+            ],
+            "rotation": [
+                -3.090862321641907e-8,
+                -0.7071068,
+                0.7071068,
+                -3.090862321641907e-8
+            ],
+            "scaling": [
+                0.1099999,
+                0.1099999,
+                0.1
+            ],
+            "translation": [
+                0.5299999,
+                0.0,
+                -0.0
+            ]
+        }
+    },
+    "meshes": {
+        "7": {
+            "link": {
+                "name": "PrimitivePlane",
+                "file": "default"
+            }
+        },
+        "8": {
+            "link": {
+                "name": "PrimitiveCube",
+                "file": "default"
+            }
+        },
+        "9": {
+            "link": {
+                "name": "PrimitiveSphere",
+                "file": "default"
+            }
+        },
+        "10": {
+            "link": {
+                "name": "PrimitiveCone",
+                "file": "default"
+            }
+        },
+        "11": {
+            "link": {
+                "name": "PrimitiveCylinder",
+                "file": "default"
+            }
+        },
+        "12": {
+            "link": {
+                "name": "PrimitiveCircle",
+                "file": "default"
+            }
+        },
+        "64": {
+            "link": {
+                "name": "headOccluder",
+                "file": "models\\head-occluder-cm92ohq49a.glb"
+            }
+        },
+        "87": {
+            "link": {
+                "name": "Mesh.004",
+                "file": "models\\stereo-glasses-9hc20dp5o8.glb"
+            }
+        }
+    },
+    "materials": {
+        "DefaultFontMaterial": {
+            "link": {
+                "name": "DefaultFontMaterial",
+                "file": "default"
+            },
+            "Text": {
+                "font": "59"
+            }
+        },
+        "20": {
+            "name": "White",
+            "shader": "Phong",
+            "Phong": {
+                "specularColor": [
+                    9.999899930335232e-7,
+                    9.99993744699168e-7,
+                    9.999999974752427e-7,
+                    1.0
+                ],
+                "shininess": 1
+            }
+        },
+        "22": {
+            "name": "Pink",
+            "Phong": {
+                "diffuseColor": [
+                    0.9098039,
+                    0.0,
+                    0.5411764,
+                    1.0
+                ],
+                "specularColor": [
+                    9.999899930335232e-7,
+                    9.999911299019004e-7,
+                    9.999999974752427e-7,
+                    1.0
+                ],
+                "shininess": 10,
+                "ambientColor": [
+                    0.317647,
+                    0.0,
+                    0.2165777,
+                    1.0
+                ]
+            }
+        },
+        "25": {
+            "name": "Yellow",
+            "Phong": {
+                "diffuseColor": [
+                    1.0,
+                    0.8039215,
+                    0.0,
+                    1.0
+                ],
+                "specularColor": [
+                    9.999999974752427e-7,
+                    9.999899930335232e-7,
+                    9.999899930335232e-7,
+                    1.0
+                ],
+                "ambientColor": [
+                    0.3843137,
+                    0.3089579,
+                    0.0,
+                    1.0
+                ]
+            }
+        },
+        "26": {
+            "name": "Green",
+            "Phong": {
+                "diffuseColor": [
+                    0.1529411,
+                    0.7882353,
+                    0.5411764,
+                    1.0
+                ],
+                "specularColor": [
+                    9.999999974752427e-7,
+                    9.999899930335232e-7,
+                    9.999899930335232e-7,
+                    1.0
+                ],
+                "ambientColor": [
+                    0.0,
+                    0.2352941,
+                    0.1437908,
+                    1.0
+                ]
+            }
+        },
+        "63": {
+            "link": {
+                "name": "Default OBJ.001",
+                "file": "models\\head-occluder-cm92ohq49a.glb"
+            },
+            "pipeline": "88",
+            "Flat": {
+                "flatTexture": "90"
+            }
+        },
+        "69": {
+            "name": "FaceMaskWireframe",
+            "pipeline": "39",
+            "Phong": {
+                "diffuseTexture": "74"
+            },
+            "Particle": {
+                "mainTexture": "68"
+            }
+        },
+        "78": {
+            "name": "FaceMask",
+            "pipeline": "39",
+            "Phong": {
+                "diffuseTexture": "72"
+            }
+        },
+        "86": {
+            "link": {
+                "name": "blinn3",
+                "file": "models\\stereo-glasses-9hc20dp5o8.glb"
+            },
+            "pipeline": "91",
+            "name": "Glasses Material"
+        }
+    },
+    "shaders": {
+        "1": {
+            "link": {
+                "name": "DistanceFieldVector Textured.frag",
+                "file": "default"
+            }
+        },
+        "2": {
+            "link": {
+                "name": "Flat.frag",
+                "file": "default"
+            }
+        },
+        "3": {
+            "link": {
+                "name": "Flat Textured.frag",
+                "file": "default"
+            }
+        },
+        "4": {
+            "link": {
+                "name": "MeshVisualizer.frag",
+                "file": "default"
+            }
+        },
+        "5": {
+            "link": {
+                "name": "Phong.frag",
+                "file": "default"
+            }
+        },
+        "6": {
+            "link": {
+                "name": "Phong Textured.frag",
+                "file": "default"
+            }
+        },
+        "28": {
+            "link": {
+                "name": "Dynamic.vert",
+                "file": "default"
+            }
+        },
+        "29": {
+            "link": {
+                "name": "Particle Textured.frag",
+                "file": "default"
+            }
+        },
+        "30": {
+            "link": {
+                "name": "Skinning.vert",
+                "file": "default"
+            }
+        },
+        "31": {
+            "link": {
+                "name": "Static.frag",
+                "file": "default"
+            }
+        },
+        "32": {
+            "link": {
+                "name": "DistanceFieldVector.frag",
+                "file": "default"
+            }
+        },
+        "37": {
+            "link": {
+                "name": "Particle.frag",
+                "file": "default"
+            }
+        },
+        "46": {
+            "link": {
+                "name": "Background.frag",
+                "file": "default"
+            }
+        },
+        "47": {
+            "link": {
+                "name": "Depth.frag",
+                "file": "default"
+            }
+        },
+        "49": {
+            "link": {
+                "name": "FullScreenTriangle.vert",
+                "file": "default"
+            }
+        },
+        "50": {
+            "link": {
+                "name": "Physical.frag",
+                "file": "default"
+            }
+        },
+        "53": {
+            "link": {
+                "name": "Sky.frag",
+                "file": "default"
+            }
+        },
+        "54": {
+            "link": {
+                "name": "Text.frag",
+                "file": "default"
+            }
+        },
+        "56": {
+            "link": {
+                "name": "Text.vert",
+                "file": "default"
+            }
+        },
+        "57": {
+            "link": {
+                "name": "TileFeedback.frag",
+                "file": "default"
+            }
+        }
+    },
+    "settings": {
+        "project": {
+            "name": "face-tracking.wlp",
+            "version": [
+                0,
+                9,
+                5
+            ],
+            "customIndexHtml": true
+        },
+        "vr": {
+            "leftEyeObject": "18",
+            "rightEyeObject": "45",
+            "enable": false
+        },
+        "scripting": {
+            "sourcePaths": [
+                "js/"
+            ],
+            "bundlingType": "esbuild",
+            "libraryPaths": [
+                "/js/lib/"
+            ],
+            "autoManageEntryPoint": false,
+            "entryPoint": "js/index.ts"
+        },
+        "ar": {
+            "framework": "webxr"
+        },
+        "rendering": {
+            "clearColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "bloom": {
+                "enabled": false
+            },
+            "textureAtlasSize": [
+                4096,
+                2048
+            ],
+            "compressedTextureAtlasSize": [
+                4096,
+                2048
+            ]
+        }
+    },
+    "animations": {},
+    "skins": {},
+    "pipelines": {
+        "33": {
+            "link": {
+                "name": "DistanceFieldVector",
+                "file": "default"
+            }
+        },
+        "34": {
+            "link": {
+                "name": "Flat Opaque",
+                "file": "default"
+            }
+        },
+        "35": {
+            "link": {
+                "name": "Flat Opaque Textured",
+                "file": "default"
+            }
+        },
+        "36": {
+            "link": {
+                "name": "MeshVisualizer",
+                "file": "default"
+            }
+        },
+        "37": {
+            "link": {
+                "name": "Phong Opaque",
+                "file": "default"
+            }
+        },
+        "38": {
+            "link": {
+                "name": "Phong Opaque Textured",
+                "file": "default"
+            }
+        },
+        "39": {
+            "link": {
+                "name": "Foliage",
+                "file": "default"
+            }
+        },
+        "40": {
+            "link": {
+                "name": "Particle",
+                "file": "default"
+            }
+        },
+        "48": {
+            "link": {
+                "name": "Depth",
+                "file": "default"
+            }
+        },
+        "51": {
+            "link": {
+                "name": "Physical Opaque",
+                "file": "default"
+            }
+        },
+        "52": {
+            "link": {
+                "name": "Physical Opaque Textured",
+                "file": "default"
+            }
+        },
+        "55": {
+            "link": {
+                "name": "Text",
+                "file": "default"
+            }
+        },
+        "58": {
+            "link": {
+                "name": "Sky",
+                "file": "default"
+            }
+        },
+        "60": {
+            "link": {
+                "name": "Phong Normalmapped",
+                "file": "default"
+            }
+        },
+        "61": {
+            "link": {
+                "name": "Phong Lightmapped",
+                "file": "default"
+            }
+        },
+        "88": {
+            "link": {
+                "name": "Phong Lightmapped",
+                "file": "default"
+            },
+            "name": "Glasses Occluder",
+            "shader": "2",
+            "features": {
+                "ALPHA_MASKED": true,
+                "TEXTURED": false
+            },
+            "blending": true,
+            "blendSrcRgb": "zero",
+            "blendSrcAlpha": "zero",
+            "blendDestRgb": "one",
+            "blendDestAlpha": "one",
+            "depthWrite": true
+        },
+        "91": {
+            "link": {
+                "name": "Phong Opaque",
+                "file": "default"
+            },
+            "name": "Glasses"
+        }
+    },
+    "files": [
+        "models/head-occluder-cm92ohq49a.glb",
+        "textures/wonderland-xr8.png",
+        "textures/uv-bright.png",
+        "models/stereo-glasses-9hc20dp5o8.glb"
+    ],
+    "textures": {
+        "72": {
+            "link": {
+                "name": "wonderland-xr8.png",
+                "file": "textures\\wonderland-xr8.png"
+            }
+        },
+        "74": {
+            "link": {
+                "name": "uv-bright.png",
+                "file": "textures\\uv-bright.png"
+            }
+        }
+    },
+    "images": {
+        "71": {
+            "link": {
+                "name": "wonderland-xr8.png",
+                "file": "textures\\wonderland-xr8.png"
+            },
+            "maxSize": [
+                2048,
+                2048
+            ]
+        },
+        "73": {
+            "link": {
+                "name": "uv-bright.png",
+                "file": "textures\\uv-bright.png"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ]
+        }
+    },
+    "fonts": {
+        "59": {
+            "link": {
+                "name": "DejaVuSans.ttf",
+                "file": "default"
+            }
+        }
+    },
+    "languages": {}
+}
